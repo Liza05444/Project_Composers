@@ -1,9 +1,9 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+
 <h1>Добро пожаловать в мир музыки!</h1>
 <h2>Каталог музыкальной билиотеки:</h2>
-<p>Количественные данные:</p>
 <ul>
 	<li><strong>Произведения:</strong>{{ num_books }}</li>
 	<li><strong>Жанры:</strong>{{ num_genres }}</li>
@@ -14,8 +14,8 @@
 	type="submit" 
 	onclick="window.location.href='add-author';" class="btn btn-secondary">Новый композитор</button>
 	<button type="submit" class="btn btn-secondary"
-	onclick="window.location.href='add-book';">Новое произведение</button>
+	onclick="window.location.href='add-book';">Новый жанр</button>
 	<button type="submit" class="btn btn-secondary"
-	onclick="window.location.href='#';">Новый жанр</button>
+	onclick="window.location.href='#';">Новое произведение</button>
 </div>
 {% endblock %}
