@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список композиторов</h1>
+
+    {% if composermodel_list %}
+    <ul>
+      {% for composermodel in composermodel_list %}
+      <li>
+        <a href="{{ composermodel.get_absolute_url }}">{{ composermodel.fio }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>К сожалению, композиторов нет.</p>
+    {% endif %}       
+{% endblock %}

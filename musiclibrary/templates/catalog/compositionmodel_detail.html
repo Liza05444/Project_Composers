@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1> {{ compositionmodel.title }} </h1>
+
+<p><strong>Composer: </strong> {{ compositionmodel.composer }}</a></p>
+<p><strong>Description: </strong> {{ compositionmodel.description }}</p>
+<p><strong>First night: </strong> {{ compositionmodel.first_night }}</p> 
+<p><strong>Genre: </strong> {{ compositionmodel.genre }}</p>  
+<p><strong>Audio: </strong> {{ compositionmodel.audio }}</p> 
+<p><strong>Description of audio: </strong> {{ compositionmodel.description_of_audio }}</p>  
+
+{% endblock %}

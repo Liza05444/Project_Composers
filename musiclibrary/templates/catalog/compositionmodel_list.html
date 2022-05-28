@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список музыкальных произведений</h1>
+
+    {% if compositionmodel_list %}
+    <ul>
+      {% for compositionmodel in compositionmodel_list %}
+      <li>
+        <a href="{{ compositionmodel.get_absolute_url }}">{{ compositionmodel.title }}</a> ({{compositionmodel.composer}})
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>К сожалению, музыкальных произведений нет.</p>
+    {% endif %}       
+{% endblock %}

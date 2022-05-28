@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Добро пожаловать в мир музыки!</h1>
+
+<h2>Каталог музыкальной билиотеки:</h2>
+<ul>
+	<li><strong>Произведения: </strong>{{ num_compositions }}</li>
+	<li><strong>Жанры: </strong>{{ num_genres }}</li>
+	<li><strong>Композиторы: </strong>{{ num_composers }}</li>
+</ul>
+
+{% endblock %}

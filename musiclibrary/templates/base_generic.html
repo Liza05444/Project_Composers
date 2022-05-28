@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'styles.css' %}">
+	{% block title %}<title>Музыкальная библиотека</title>{% endblock %}
+</head>
+<body class="body_base">
+<header>
+	<div class="topnav">
+	  <a class="active" href="/">Главная</a>
+	  <a href="{% url 'composers' %}">Композиторы</a>
+	  <a href="{% url 'genres' %}">Жанры</a>
+	  <a href="{% url 'compositions' %}">Произведения</a>
+	  <div class="search-container">
+	  	<form action="" method="get">
+  		  <input name="s" placeholder="Искать здесь..." type="search">
+  		  <button type="submit">Поиск</button>
+		</form>
+	  </div>
+	</div>
+<main class="content">
+	{% block content %}<!-- Content -->{% endblock %}
+</main>
+<div id="footer">
+	<h3>&copy; 2022 DESIGNED BY Liza Bromberg</h3>
+</div> 
+</body>
+</html>

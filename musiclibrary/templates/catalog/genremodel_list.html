@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список жанров</h1>
+
+    {% if genremodel_list %}
+    <ul>
+      {% for genremodel in genremodel_list %}
+      <li>
+        <a href="{{ genremodel.get_absolute_url }}">{{ genremodel.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>К сожалению, жанров нет.</p>
+    {% endif %}       
+{% endblock %}
